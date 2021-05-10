@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unos Rasporeda</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <form onsubmit="return dodajAktivnost()">
+        <label for="naziv">Naziv predmeta:</label>
+        <input type="text" name="naziv_predmeta" id="naziv">
+        <br>
+        <label for="naziv">Aktivnost:</label> <br>
+        <input type="radio" id="predavanje" name="aktivnost" value="Predavanje" required>
+        <label for="predavanje">Predavanje</label><br>
+        <input type="radio" id="vjezba" name="aktivnost" value="Vjezba" required>
+        <label for="vjezba">Vjezba</label><br>
+        <br>
+        <label for="naziv">Dan:</label>
+        <select name="dan" id="dan" required>
+            <option value="ponedjeljak">Ponedjeljak</option>
+            <option value="utorak">Utorak</option>
+            <option value="srijeda">Srijeda</option>
+            <option value="cetvrtak">Cetvrtak</option>
+            <option value="petak">Petak</option>
+
+        </select>
+        <br>
+        <label for="naziv">Vrijeme pocetka:</label>
+        <input type="time" name="vrijeme_pocetka" id="vrijeme_pocetka" required>
+        <label for="naziv">Vrijeme kraja:</label>
+        <input type="time" name="vrijeme_kraja" id="vrijeme_kraja" required>
+        <br>
+        <input type="submit" value="Unesi termin">
+    </form>
+
+    <p id="message"></p>
+    <script src="unosRasporeda.js"></script>
+
+</body>
+
+</html>
